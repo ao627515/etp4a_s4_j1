@@ -19,6 +19,9 @@ class Event
         @start_date = add_minutes(@start_date, @duration)
     end
     
+    def is_past?
+        @start_date < Time.now
+    end
 
 private
 
@@ -29,5 +32,6 @@ private
     def add_minutes(time, minutes)
         time + (minutes * 60)
     end
+
 
 end
