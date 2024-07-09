@@ -15,10 +15,19 @@ class Event
         @start_date = add_hours(@start_date, 24)
     end
 
+    def end_date
+        @start_date = add_minutes(@start_date, @duration)
+    end
+    
+
 private
 
     def add_hours(time, hours)
         time + (hours * 3600)
+    end
+
+    def add_minutes(time, minutes)
+        time + (minutes * 60)
     end
 
 end
