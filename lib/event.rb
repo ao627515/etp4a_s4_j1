@@ -23,6 +23,10 @@ class Event
         @start_date < Time.now
     end
 
+    def is_future?
+        !is_past?
+    end
+
 private
 
     def add_hours(time, hours)
