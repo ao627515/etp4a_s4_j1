@@ -27,6 +27,11 @@ class Event
         !is_past?
     end
 
+    def is_soon?(minutes = 30)
+        soon = add_minutes(Time.now, minutes)
+        soon  < @start_date ? true : false
+    end
+
 private
 
     def add_hours(time, hours)
