@@ -9,7 +9,7 @@ class User
       @@users.push(self)
     end
   public
-    def all
+    def self.all
       @@users
     end
   end
