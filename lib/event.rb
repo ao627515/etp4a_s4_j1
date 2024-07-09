@@ -32,6 +32,13 @@ class Event
         soon  < @start_date ? true : false
     end
 
+    def to_s
+        puts "Titre: #{@title}"
+        puts "Date de début: #{@start_date.strftime("%Y-%m-%d %H:%M")}"
+        puts "Duree: #{@duration}"
+        puts "Invités: "+@attendees.join(', ')
+    end
+
 private
 
     def add_hours(time, hours)
